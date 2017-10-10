@@ -17,11 +17,11 @@ public class Menu {
         p = Pattern.compile("[1-5]{1}");
         m = null;
         do{
-            System.out.println("*****Для добавления,поиска,удаления Employee наберите 1");
-            System.out.println("*****Для перезаписи,поиска EmployeeDetail наберите 2");
-            System.out.println("*****Для добавления,поиска,удаления Department наберите 3");
-            System.out.println("*****Для добавления,поиска,удаления Meeting наберите 4");
-            System.out.println("*****Для выхода наберите 5");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅРїСЂРѕСЊС‚пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ,пїЅпїЅпїЅпїЅпїЅпїЅ,пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Employee пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ,пїЅпїЅпїЅпїЅпїЅпїЅ EmployeeDetail пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ,пїЅпїЅпїЅпїЅпїЅпїЅ,пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Department пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 3");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ,пїЅпїЅпїЅпїЅпїЅпїЅ,пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Meeting пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 4");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 5");
             choice = in.nextLine();
             m = p.matcher(choice);
         } while(!m.matches());
@@ -39,46 +39,46 @@ public class Menu {
         in=new Scanner(System.in);
         p = Pattern.compile("[1-5]{1}");
         do{
-            System.out.println("*****Для добавления Employee наберите 1");
-            System.out.println("*****Для поиска Employee наберите 2");
-            System.out.println("*****Для удаления Employee наберите 3");
-            System.out.println("*****Для отправки Employee на конференцию наберите 4");
-            System.out.println("*****Для возврата в предыдущее меню наберите 5");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Employee пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Employee пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Employee пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 3");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Employee пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 4");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 5");
             choice = in.nextLine();
             m = p.matcher(choice);
         }while(!m.matches());
         if (choice.equalsIgnoreCase("1")){
             in=new Scanner(System.in);
             Employee emp=new Employee();
-            System.out.println("*****введите firstname");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ firstname");
             emp.setFirstName(in.nextLine());
-            System.out.println("*****введите lastname");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ lastname");
             emp.setLastName(in.nextLine());
-            System.out.println("*****введите cellphone");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ cellphone");
             emp.setCellPhone(in.nextLine());
             p = Pattern.compile("[0-9]{1,}");
             
             do{
-                System.out.println("*****введите id department");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id department");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
             DepartmentDAO departmentDAO = context.getBean(DepartmentDAO.class);
             Department dep=departmentDAO.getDepartment(Integer.parseInt(choice));
             if (dep==null){
-                System.out.println("*****department c id="+choice+" не существует");
+                System.out.println("*****department c id="+choice+" пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
                 employeeMenu();
             }
             emp.setDepartment(dep);
             
             EmployeeDetail eDet=new EmployeeDetail();
-            System.out.println("*****введите street");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ street");
             eDet.setStreet(in.nextLine());
-            System.out.println("*****введите sity");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ sity");
             eDet.setSity(in.nextLine());
-            System.out.println("*****введите state");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ state");
             eDet.setState(in.nextLine());
-            System.out.println("*****введите country");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ country");
             eDet.setCountry(in.nextLine());
             emp.setEmployeeDetail(eDet);
             eDet.setEmployee(emp);
@@ -92,17 +92,17 @@ public class Menu {
             in=new Scanner(System.in);
             p = Pattern.compile("[0-9]{1,}");
             do{
-                System.out.println("*****введите id искомого Employee");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Employee");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
             EmployeeDAO employeeDAO = context.getBean(EmployeeDAO.class);
             Employee emp=employeeDAO.getEmployee(Integer.parseInt(choice));
             if (emp!=null){
-                System.out.println("ответ="+emp.toString());
+                System.out.println("пїЅпїЅпїЅпїЅпїЅ="+emp.toString());
             }
             else{
-                System.out.println("*****Employee с заданным id не существует");
+                System.out.println("*****Employee пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             }
             employeeMenu();
         }
@@ -110,7 +110,7 @@ public class Menu {
             in=new Scanner(System.in);
             p = Pattern.compile("[0-9]{1,}");
             do{
-                System.out.println("*****введите id удаляемого Employee");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Employee");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
@@ -122,13 +122,13 @@ public class Menu {
             in=new Scanner(System.in);
             p = Pattern.compile("[0-9]{1,}");
             do{
-                System.out.println("*****введите meetingId");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ meetingId");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
             Integer meetingId=Integer.parseInt(choice);
             do{
-                System.out.println("*****введите Id Employee, отправляемого на конференцию");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ Id Employee, пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
@@ -147,9 +147,9 @@ public class Menu {
         in=new Scanner(System.in);
         p = Pattern.compile("[1-3]{1}");
         do{
-            System.out.println("*****Для обновления EmployeeDetail наберите 1");
-            System.out.println("*****Для поиска EmployeeDetail по Id Employee наберите 2");
-            System.out.println("*****Для возврата в предыдущее меню наберите 3");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ EmployeeDetail пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ EmployeeDetail пїЅпїЅ Id Employee пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 3");
             choice = in.nextLine();
             m = p.matcher(choice);
         }while(!m.matches());
@@ -158,7 +158,7 @@ public class Menu {
             p = Pattern.compile("[0-9]{1,}");
             int id;
             do{
-                System.out.println("*****введите id Employee");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id Employee");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
@@ -167,22 +167,22 @@ public class Menu {
             EmployeeDetail eDet=employeeDetailDAO.getEmployeeDetail(id);
             if (eDet!=null){
                 in=new Scanner(System.in);
-                System.out.println("*****введите street");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ street");
                 eDet.setStreet(in.nextLine());
-                System.out.println("*****введите sity");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ sity");
                 eDet.setSity(in.nextLine());
-                System.out.println("*****введите state");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ state");
                 eDet.setState(in.nextLine());
-                System.out.println("*****введите country");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ country");
                 eDet.setCountry(in.nextLine());
                 System.out.println(eDet);
                 
                 employeeDetailDAO.updateEmployeeDetail(eDet);
                 //Factory.getInstance().getEmployeeDetailDAO().updateEmployeeDetail(eDet);
-                System.out.println("*****EmployeeDetail с id="+id+" перезаписан");
+                System.out.println("*****EmployeeDetail пїЅ id="+id+" пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             }
             else{
-                System.out.println("*****Employee с заданным id не существует");
+                System.out.println("*****Employee пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             }
             employeeDetailMenu();
         }
@@ -191,7 +191,7 @@ public class Menu {
             p = Pattern.compile("[0-9]{1,}");
             int id;
             do{
-                System.out.println("*****введите id Employee");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id Employee");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
@@ -203,7 +203,7 @@ public class Menu {
                 System.out.println("Id="+id+" "+eDet.toString());
             }
             else{
-                System.out.println("*****объекта с заданным id не существует");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             }
             employeeDetailMenu();
         }
@@ -215,17 +215,17 @@ public class Menu {
         in=new Scanner(System.in);
         p = Pattern.compile("[1-4]{1}");
         do{
-            System.out.println("*****Для добавления Department наберите 1");
-            System.out.println("*****Для поиска Department по id наберите 2");
-            System.out.println("*****Для удаления Department наберите 3");
-            System.out.println("*****Для возврата в предыдущее меню наберите 4");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Department пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Department пїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Department пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 3");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 4");
             choice = in.nextLine();
             m = p.matcher(choice);
         }while(!m.matches());
         if (choice.equalsIgnoreCase("1")){
             in=new Scanner(System.in);
             Department dep=new Department();
-            System.out.println("*****введите departmentName");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ departmentName");
             dep.setDepartmentName(in.nextLine());
             DepartmentDAO departmentDAO = context.getBean(DepartmentDAO.class);
             departmentDAO.addDepartment(dep);
@@ -236,7 +236,7 @@ public class Menu {
             in=new Scanner(System.in);
             p = Pattern.compile("[0-9]{1,}");
             do{
-                System.out.println("*****введите id department");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id department");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
@@ -246,7 +246,7 @@ public class Menu {
                 System.out.println(dep.toString());
             }
             else{
-                System.out.println("*****department с заданным id не существует");
+                System.out.println("*****department пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             }
             departmentMenu();
         }
@@ -254,7 +254,7 @@ public class Menu {
             in=new Scanner(System.in);
             p = Pattern.compile("[0-9]{1,}");
             do{
-                System.out.println("*****введите id удаляемого department");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ department");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
@@ -271,17 +271,17 @@ public class Menu {
         in=new Scanner(System.in);
         p = Pattern.compile("[1-4]{1}");
         do{
-            System.out.println("*****Для добавления Meeting наберите 1");
-            System.out.println("*****Для поиска Meeting по id наберите 2");
-            System.out.println("*****Для удаления Meeting наберите 3");
-            System.out.println("*****Для возврата в предыдущее меню наберите 4");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Meeting пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 1");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ Meeting пїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 2");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ Meeting пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 3");
+            System.out.println("*****пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ 4");
             choice = in.nextLine();
             m = p.matcher(choice);
         }while(!m.matches());
         if (choice.equalsIgnoreCase("1")){
             in=new Scanner(System.in);
             Meeting meet=new Meeting();
-            System.out.println("*****введите название конференции");
+            System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             meet.setTopic(in.nextLine());
             MeetingDAO meetingDAO = context.getBean(MeetingDAO.class);
             meetingDAO.addMeeting(meet);
@@ -291,7 +291,7 @@ public class Menu {
             in=new Scanner(System.in);
             p = Pattern.compile("[0-9]{1,}");
             do{
-                System.out.println("*****введите meetingId");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ meetingId");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
@@ -301,7 +301,7 @@ public class Menu {
                 System.out.println(meet.toString());
             }
             else{
-                System.out.println("*****meeting с заданным id не существует");
+                System.out.println("*****meeting пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
             }
             meetingMenu();
         }
@@ -309,7 +309,7 @@ public class Menu {
             in=new Scanner(System.in);
             p = Pattern.compile("[0-9]{1,}");
             do{
-                System.out.println("*****введите id удаляемого meeting");
+                System.out.println("*****пїЅпїЅпїЅпїЅпїЅпїЅпїЅ id пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ meeting");
                 choice = in.nextLine();
                 m = p.matcher(choice);
             } while(!m.matches());
