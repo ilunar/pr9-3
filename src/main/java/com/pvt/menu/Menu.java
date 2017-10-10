@@ -17,7 +17,7 @@ public class Menu {
         p = Pattern.compile("[1-5]{1}");
         m = null;
         do{
-            System.out.println("*****��� ��проьт��������,������,�������� Employee �������� 1");
+            System.out.println("*****ррпрпрр Employee �������� 1");
             System.out.println("*****��� ����������,������ EmployeeDetail �������� 2");
             System.out.println("*****��� ����������,������,�������� Department �������� 3");
             System.out.println("*****��� ����������,������,�������� Meeting �������� 4");
