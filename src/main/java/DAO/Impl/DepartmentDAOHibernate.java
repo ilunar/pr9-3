@@ -5,7 +5,7 @@ import DAO.DepartmentDAO;
 import com.pvt.relationships.Department;
 import org.hibernate.*;
 
-public class DepartmentDAOHibernate implements DepartmentDAO {
+public class DepartmentDAOHibernate  DepartmentDAO {
 
     private SessionFactory sessionFactory;
     
@@ -57,9 +57,9 @@ public class DepartmentDAOHibernate implements DepartmentDAO {
             Department dep = (Department) session.get(Department.class, departmentId);
             if (dep!=null){
                 session.delete(dep);
-                System.out.println("*****Department с id="+departmentId+" удален");
+                System.out.println("*****Department Г± id="+departmentId+" ГіГ¤Г Г«ГҐГ­");
             }
-            else {System.out.println("*****введен несуществующий departmentId");}
+            else {System.out.println("*****ГўГўГҐГ¤ГҐГ­ Г­ГҐГ±ГіГ№ГҐГ±ГІГўГіГѕГ№ГЁГ© departmentId");}
             session.getTransaction().commit();
         } catch (HibernateException e) {
             session.getTransaction().rollback();
