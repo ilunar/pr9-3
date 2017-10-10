@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans 
+    xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd ">
+    
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+	<property name="url" value="jdbc:mysql://localhost:3306/relationship" />
+	<property name="username" value="root" />
+	<property name="password" value="11091109q" />
+    </bean>
+    
+    <bean id="hibernate3AnnotatedSessionFactory"
+    class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+	<property name="dataSource" ref="dataSource" />
+        <property name="mappingResources">
+            <list>
+                <value>com.pvt.relationships/department.hbm.xml</value>
+                <value>com.pvt.relationships/employee.hbm.xml</value>
+                <value>com.pvt.relationships/employeeDetail.hbm.xml</value>
+                <value>com.pvt.relationships/meeting.hbm.xml</value>
+            </list>
+        </property>
+        <property name="hibernateProperties">
+            <props>
+		<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
+		<prop key="hibernate.current_session_context_class">thread</prop>
+		<prop key="hibernate.show_sql">true</prop>
+                <prop key="hibernate.hbm2ddl.auto">update</prop>
+            </props>
+	</property>
+    </bean>
+    
+    <bean id="employeeDAO" class="DAO.Impl.EmployeeDAOHibernate">
+	<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+    </bean>
+    <bean id="employeeDetailDAO" class="DAO.Impl.EmployeeDetailDAOHibernate">
+	<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+    </bean>
+    <bean id="departmentDAO" class="DAO.Impl.DepartmentDAOHibernate">
+	<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+    </bean>
+    <bean id="meetingDAO" class="DAO.Impl.MeetingDAOHibernate">
+	<property name="sessionFactory" ref="hibernate3AnnotatedSessionFactory" />
+    </bean>
+</beans>

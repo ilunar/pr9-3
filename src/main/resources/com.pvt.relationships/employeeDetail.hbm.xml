@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pvt.relationships.EmployeeDetail" table="employeedetail">  
+        <id name="employeeId">
+            <generator class="foreign">
+                <param name="property">employee</param>
+            </generator>
+        </id>
+        <one-to-one name="employee" class="com.pvt.relationships.Employee" constrained="true" />
+        <property name='street'>
+            <column name='street' not-null="true"/>
+        </property>
+        <property name='sity'>
+            <column name='sity' not-null="true"/>
+        </property>
+        <property name='state'>
+            <column name='state' not-null="true"/>
+        </property>
+        <property name='country'>
+            <column name='country' not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.pvt.relationships.Meeting" table="meetings">
+        <id name="meetingId">
+            <generator class="increment"/>
+        </id>
+        <property name='topic'/>
+        <set name="employees" table="employee_meeting" inverse="true" lazy="true" >
+            <key>
+                <column name="meetingId" not-null="true"/> 
+            </key>   
+            <many-to-many entity-name="com.pvt.relationships.Employee">
+                <column name="employeeId" not-null="true"/>
+            </many-to-many>
+        </set>  
+    </class>
+</hibernate-mapping>

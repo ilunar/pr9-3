@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.pvt.relationships.Employee" table="employees">
+        <id name="employeeId">
+            <generator class="increment"/>
+        </id>
+        <property name='firstName'>
+            <column name='firstName' not-null="true"/>
+        </property>
+        <property name='lastName'>
+            <column name='lastName' not-null="true"/>
+        </property>
+        <property name='cellPhone'>
+            <column name='cellPhone' not-null="true"/>
+        </property>
+        <many-to-one name='department' class="com.pvt.relationships.Department"  >
+            <column name='departmentId' not-null="true" />
+        </many-to-one> 
+        <one-to-one name="employeeDetail" class="com.pvt.relationships.EmployeeDetail" cascade="all"/>
+        <set name="meetings" table="employee_meeting" inverse="false" lazy="true" >
+            <key>
+                <column name="employeeId" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.pvt.relationships.Meeting">
+                <column name="meetingId" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>    
+</hibernate-mapping>
