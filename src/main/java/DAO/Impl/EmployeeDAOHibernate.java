@@ -62,9 +62,9 @@ public class EmployeeDAOHibernate implements EmployeeDAO {
             Employee emp = (Employee) session.get(Employee.class, employeeId);
             if (emp!=null){
                 session.delete(emp);
-                System.out.println("*****Employee с id="+employeeId+" удален");
+                System.out.println("*****Employee with a id="+employeeId+" delete");
             }
-            else {System.out.println("*****введен несуществующий employeeId");}
+            else {System.out.println("*****incorrect employeeId");}
             session.getTransaction().commit();
         } catch (HibernateException e) {
             session.getTransaction().rollback();
@@ -84,9 +84,9 @@ public class EmployeeDAOHibernate implements EmployeeDAO {
             Employee emp = (Employee) session.get(Employee.class, employeeId);
             if (emp!=null&& meet!=null){
                 emp.getMeetings().add(meet);
-                System.out.println("*****Employee с id="+employeeId+" отправлен на конференцию с id= "+meetingId);
+                System.out.println("*****Employee with a id="+employeeId+" send to meeting with a id= "+meetingId);
             }
-            else {System.out.println("*****введен несуществующий employeeId/meetingId");}
+            else {System.out.println("*****incorrect employeeId or meetingId");}
             session.getTransaction().commit();
         } catch (Exception e) {
             session.getTransaction().rollback();

@@ -61,9 +61,9 @@ public class MeetingDAOHibernate implements MeetingDAO {
                     emp.getMeetings().remove(meet);
                 }
                 session.delete(meet);
-                System.out.println("*****Meeting с id="+meetingId+" удален");
+                System.out.println("*****Meeting with a id="+meetingId+" delete");
             }
-            else {System.out.println("*****введен несуществующий meetingId");}
+            else {System.out.println("*****incorrect meetingId");}
             session.getTransaction().commit();
         } catch (HibernateException e) {
             session.getTransaction().rollback();

@@ -57,9 +57,9 @@ public class DepartmentDAOHibernate implements DepartmentDAO {
             Department dep = (Department) session.get(Department.class, departmentId);
             if (dep!=null){
                 session.delete(dep);
-                System.out.println("*****Department с id="+departmentId+" удален");
+                System.out.println("*****Department with a id="+departmentId+" delete");
             }
-            else {System.out.println("*****введен несуществующий departmentId");}
+            else {System.out.println("*****incorrect departmentId");}
             session.getTransaction().commit();
         } catch (HibernateException e) {
             session.getTransaction().rollback();
